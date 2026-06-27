@@ -1,0 +1,6 @@
+{
+  "name": "Programmatic SEO Tool Factory",
+  "description": "An automated utility tool factory that algorithmically generates 110,000+ SEO-optimized single-page utility tools with a central hub, rich metadata, and client-side logic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

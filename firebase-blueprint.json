@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "user": {
+      "title": "User",
+      "description": "User profile with synchronized favorites and recently visited tools",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User public display name"
+        },
+        "favorites": {
+          "type": "array",
+          "description": "List of favorite tool slugs"
+        },
+        "recents": {
+          "type": "array",
+          "description": "List of recently viewed tool slugs"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the profile was initialized"
+        }
+      },
+      "required": ["email", "createdAt", "favorites", "recents"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "user",
+      "description": "User documents mapping Firebase auth user IDs to their profile state"
+    }
+  }
+}
